@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="popup.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <span class="dot"></span>
+        <span class="brand-name">loaf</span>
+      </div>
+      <div class="tagline italic">the cat is watching.</div>
+    </header>
+
+    <section class="current">
+      <div class="card glass">
+        <div class="row top">
+          <div class="host-block">
+            <div class="label">on this site</div>
+            <div class="host" id="host">—</div>
+          </div>
+          <div class="usage" id="usage-pill">0m / off</div>
+        </div>
+
+        <div class="bar"><div class="bar-fill" id="bar-fill"></div></div>
+
+        <div class="row controls">
+          <div class="limit-input">
+            <span class="italic limit-label">limit</span>
+            <input type="number" id="minutes" min="0" max="600" step="5" value="30">
+            <span class="unit">min/day</span>
+          </div>
+          <button id="save" class="primary">save</button>
+        </div>
+
+        <div class="row tail">
+          <button id="off" class="ghost">turn off for this site</button>
+          <button id="reset" class="ghost">reset today</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="others">
+      <div class="section-title italic">other sites you've put on a leash</div>
+      <ul id="list" class="list"></ul>
+    </section>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
